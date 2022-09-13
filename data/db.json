@@ -31,7 +31,7 @@
     { "key": "ü" },
     { "key": "ß" }
   ],
-  "solutions": [
+  "wordle-solutions": [
     { "id": 1, "word": "boden" },
     { "id": 2, "word": "besen" },
     { "id": 3, "word": "essig" },

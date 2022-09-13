@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
 
     document.title = 'Reinigungs-Wordle'
-    fetch('http://localhost:3001/solutions')
+    fetch('http://localhost:3001/wordle-solutions')
     .then( res => res.json())
     .then( json => {
       setSolution(json[Math.floor(Math.random() * json.length)].word);
@@ -24,8 +24,11 @@ function App() {
 
     <footer>
       <h3>Version: 0.4</h3>
-      20 words directly or indirectly related to cleaning and facility management.<br/>
-      feel free to check out my <a target="_blank" href="https://www.lechner.io">website</a> and/or <a target="_blank" href="https://www.github.com/lechnerio">github profile</a>.
+      20 words directly or indirectly related to cleaning and facility management. this version does
+      not check for words not included in the solution-list (wrong or non existing words not detected).
+      <br/><br/>
+      feel free to check out my <a target="_blank" href="https://www.lechner.io">website</a> and/or <a target="_blank" href="https://www.github.com/lechnerio">github profile</a>.<br/>
+      🖖
       
     </footer>      
     </div>
