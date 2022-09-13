@@ -6,6 +6,8 @@ function App() {
   const [solution, setSolution] = useState(null);
 
   useEffect(() => {
+
+    document.title = 'Reinigungs-Wordle'
     fetch('http://localhost:3001/solutions')
     .then( res => res.json())
     .then( json => {
@@ -18,8 +20,16 @@ function App() {
       <h1>Reinigungs-Wordle</h1>
 
       { solution && <Wordle solution={solution} /> }
+
+
+    <footer>
+      <h3>Version: 0.4</h3>
+      20 words directly or indirectly related to cleaning and facility management.<br/>
+      feel free to check out my <a target="_blank" href="https://www.lechner.io">website</a> and/or <a target="_blank" href="https://www.github.com/lechnerio">github profile</a>.
       
+    </footer>      
     </div>
+
   );
 }
 
