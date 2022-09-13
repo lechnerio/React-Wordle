@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
 
     document.title = 'Reinigungs-Wordle'
-    fetch('http://localhost:3001/wordle-solutions')
+    fetch('https://apps.lechner.io/data/worlde-solutions.json')
     .then( res => res.json())
     .then( json => {
       setSolution(json[Math.floor(Math.random() * json.length)].word);
