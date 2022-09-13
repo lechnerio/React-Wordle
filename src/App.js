@@ -9,6 +9,7 @@ function App() {
 
     document.title = 'Reinigungs-Wordle'
     fetch('https://apps.lechner.io/data/worlde-solutions.json')
+    // fetch('http://localhost:3001/wordle-solutions')
     .then( res => res.json())
     .then( json => {
       setSolution(json[Math.floor(Math.random() * json.length)].word);
@@ -27,7 +28,8 @@ function App() {
       20 words directly or indirectly related to cleaning and facility management. this version does
       not check for words not included in the solution-list (wrong or non existing words not detected).
       <br/><br/>
-      feel free to check out my <a target="_blank" href="https://www.lechner.io">website</a> and/or <a target="_blank" href="https://www.github.com/lechnerio">github profile</a>.<br/>
+      feel free to check out my <a target="_blank" rel="noreferrer" href="https://www.lechner.io">website</a> 
+      and/or <a target="_blank" rel="noreferrer" href="https://www.github.com/lechnerio">github profile</a>.<br/>
       🖖
       
     </footer>      
